@@ -1,3 +1,9 @@
+# BraiSEO
+
+BraiSEO is Brai's deployment of [OpenSEO](https://github.com/every-app/open-seo), used under the MIT license (see `LICENSE`). Deployment: `.github/workflows/deploy-braiseo.yml` (Cloudflare self-host behind Cloudflare Access).
+
+---
+
 # OpenSEO
 
 > Open source alternative to Semrush and Ahrefs

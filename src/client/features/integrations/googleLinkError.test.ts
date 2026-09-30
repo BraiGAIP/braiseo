@@ -33,7 +33,7 @@ describe("Google link callback errors", () => {
     const copy = googleAuthErrorCopy(error!.code, "Search Console");
     expect(copy.title).toBe("Google account already connected");
     expect(copy.description).toContain(
-      "Sign in to the OpenSEO user that linked it",
+      "Sign in to the BraiSEO user that linked it",
     );
     expect(location.href).toBe(
       "https://app.example.com/p/project-a#connect-gsc",
