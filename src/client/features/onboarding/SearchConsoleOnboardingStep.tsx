@@ -50,7 +50,7 @@ export function SearchConsoleOnboardingStep(props: NavigationProps) {
           Connect Google Search Console now?
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-base-content/60">
-          Bring your real clicks and queries into OpenSEO and your AI agent. You
+          Bring your real clicks and queries into BraiSEO and your AI agent. You
           can also do this later from the dashboard.
         </p>
       </div>

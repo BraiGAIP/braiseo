@@ -52,7 +52,7 @@ function AiPage() {
       <div className="mx-auto max-w-2xl">
         <h1 className="text-2xl font-semibold tracking-tight">Agent setup</h1>
         <p className="mt-3 text-pretty text-sm leading-relaxed text-base-content/70">
-          The most powerful way to use OpenSEO is through the AI agent you
+          The most powerful way to use BraiSEO is through the AI agent you
           already use. Set it up once, then ask it anything.
         </p>
 
@@ -82,7 +82,7 @@ function AiPage() {
               <section className="rounded-xl border border-base-300 p-5 sm:p-6">
                 <h2 className="text-base font-semibold">Set up your agent</h2>
                 <p className="mt-2 text-sm leading-relaxed text-base-content/60">
-                  Paste the setup prompt into your agent to connect OpenSEO and
+                  Paste the setup prompt into your agent to connect BraiSEO and
                   install its SEO skills. It will guide you through any manual
                   steps.
                 </p>

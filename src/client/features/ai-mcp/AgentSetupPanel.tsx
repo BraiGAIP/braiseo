@@ -2,7 +2,7 @@ import { Package } from "lucide-react";
 import { CopyButton } from "./SetupControls";
 
 export const AGENT_SETUP_DESCRIPTION =
-  "Paste this prompt into your agent to automatically configure OpenSEO for you.";
+  "Paste this prompt into your agent to automatically configure BraiSEO for you.";
 
 export function AgentSetupPanel({
   prompt,
