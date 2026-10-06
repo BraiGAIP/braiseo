@@ -1,5 +1,7 @@
 # Agent guidance
 
+> **BraiSEO fork:** read `BRAISEO_HANDOFF.md` first for project state, deploy setup and next steps.
+
 ## Engineering principles
 
 - Prefer simple, readable, flat code with minimal indirection.
