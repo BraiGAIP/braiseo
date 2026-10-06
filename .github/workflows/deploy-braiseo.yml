@@ -148,14 +148,17 @@ jobs:
         run: pnpm alchemy cloudflare bootstrap --env-file .env.selfhost
 
       - name: Deploy
-        run: pnpm deploy:selfhost --yes 2>&1 | tee "$RUNNER_TEMP/deploy.log"
+        run: |
+          # pipefail: without it tee's exit status hides a failed deploy.
+          set -o pipefail
+          pnpm deploy:selfhost --yes 2>&1 | tee "$RUNNER_TEMP/deploy.log"
 
       - name: Show URL
         run: |
           url=$(grep -oE 'https://open-seo-selfhost\.[a-z0-9-]+\.workers\.dev' "$RUNNER_TEMP/deploy.log" | tail -1)
           if [ -z "$url" ]; then
-            echo "::warning::Deploy finished but the Worker URL was not found in its output; see Workers & Pages in Cloudflare."
-            exit 0
+            echo "::error::Deploy finished but the Worker URL was not found in its output; check Workers & Pages in Cloudflare and that the URL requires a Cloudflare Access login."
+            exit 1
           fi
           echo "BraiSEO: $url" | tee -a "$GITHUB_STEP_SUMMARY"
           # BraiSEO must never be public: expect a Cloudflare Access login redirect.
